@@ -28,18 +28,18 @@ import com.example.tugasfe.R
 import com.example.tugasfe.model.FakeGameData
 import com.example.tugasil.TugasFEApp
 import com.example.tugasil.model.DetailGame
-import com.example.tugasil.model.DetailGame
-import com.example.tugasil.model.FakeGameData
+//import com.example.tugasil.model.DetailGame
+//import com.example.tugasil.model.FakeGameData
 import com.example.tugasil.navbar.BottomNavItem
 import com.example.tugasil.navbar.Screen
 import com.example.tugasil.pages.AboutPages
 import com.example.tugasil.pages.GridPages
 import com.example.tugasil.pages.ListPages
-import com.example.tugasil.ui.theme.TugasILTheme
+//import com.example.tugasil.ui.theme.TugasILTheme
 
 @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
 @Composable
-fun TugasILApp(
+fun TugasFEApp(
     modifier: Modifier = Modifier,
     navController: NavController = rememberNavController(),
 ) {
@@ -91,17 +91,17 @@ private fun BottomBar(
         val currentRoute = navBackStackEntry?.destination?.route
         val navigationItems = listOf(
             BottomNavItem(
-                title = stringResource(id = R.string.menu_list),
+                title = stringResource(id = R.string.app_name),
                 icon = Icons.Default.List,
                 screen = Screen.List
             ),
             BottomNavItem(
-                title = stringResource(id = R.string.menu_grid),
+                title = stringResource(id = R.string.app_name),
                 icon = Icons.Default.Menu,
                 screen = Screen.Grid
             ),
             BottomNavItem(
-                title = stringResource(id = R.string.menu_about),
+                title = stringResource(id = R.string.app_name),
                 icon = Icons.Default.AccountCircle,
                 screen = Screen.About
             )
@@ -128,7 +128,6 @@ private fun BottomBar(
 @Preview(showBackground = true)
 @Composable
 fun TugasILAppPreview() {
-    TugasFETheme {
+    TugasFEApp()
         TugasFEApp()
     }
-}

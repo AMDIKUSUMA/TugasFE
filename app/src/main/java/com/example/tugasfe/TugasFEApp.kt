@@ -25,7 +25,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import com.example.tugasfe.R
-import com.example.tugasfe.ui.theme.TugasFETheme
+//import com.example.tugasfe.ui.theme.TugasFETheme
 import com.example.tugasil.model.DetailGame
 import com.example.tugasfe.model.FakeGameData
 import com.example.tugasil.navbar.BottomNavItem
@@ -88,17 +88,17 @@ private fun BottomBar(
         val currentRoute = navBackStackEntry?.destination?.route
         val navigationItems = listOf(
             BottomNavItem(
-                title = stringResource(id = R.string.menu_list),
+                title = stringResource(id = R.string.app_name),
                 icon = Icons.Default.List,
                 screen = Screen.List
             ),
             BottomNavItem(
-                title = stringResource(id = R.string.menu_grid),
+                title = stringResource(id = R.string.app_name),
                 icon = Icons.Default.Menu,
                 screen = Screen.Grid
             ),
             BottomNavItem(
-                title = stringResource(id = R.string.menu_about),
+                title = stringResource(id = R.string.app_name),
                 icon = Icons.Default.AccountCircle,
                 screen = Screen.About
             )
@@ -124,7 +124,7 @@ private fun BottomBar(
 
 @Preview(showBackground = true)
 @Composable
-fun TugasILAppPreview() {
+fun TugasFEAppPreview() {
     TugasFEApp()
         TugasFEApp()
     }
